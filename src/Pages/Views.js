@@ -8,7 +8,9 @@ export default function Views() {
 
     const { user, setUser } = useContext(UserContext);
     const data = {
-        fetchUrl: "Hello po"
+        fetchUrl: "Hello po",
+        th2: "Views",
+        th3: "IP Address"
     }
 
     return (
