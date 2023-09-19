@@ -5,6 +5,17 @@ export default function Layout ({data}) {
 
     const { table1H1, table2H1, th2, th3, fetchedData, td1, td2, td3 } = data;
 
+    function convertToPhilippineTime(time) {
+        const options = {
+          timeZone: "Asia/Manila",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric"
+        };
+      
+        return new Date(time).toLocaleString("en-US", options);
+      }
+
     return (
         <Container>
             <Row>
@@ -37,7 +48,7 @@ export default function Layout ({data}) {
                             <tbody>
                                 {fetchedData.map((res,index) => (
                                 <tr key={index}>
-                                    <td>{res[td1]}</td>
+                                <td>{convertToPhilippineTime(res[td1])}</td>
                                     <td>{td2.map((prop) => res[prop]).join(", ")}</td>
                                     <td>{res[td3]}</td>
                                 </tr>
