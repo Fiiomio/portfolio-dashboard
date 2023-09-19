@@ -38,11 +38,8 @@ export default function Login() {
                 })
 
             } else {
-                Swal.fire ({
-                    title: "Login Failed",
-                    icon: "error",
-                    text: "Please enter the correct credentials",
-                })
+                
+                return false
                 
             }
             
