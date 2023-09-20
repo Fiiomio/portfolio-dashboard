@@ -1,5 +1,5 @@
 import { Button, Form } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import { useContext, useState } from 'react';
 import UserContext from '../UserContext';
@@ -7,6 +7,7 @@ import UserContext from '../UserContext';
 export default function Login() {
 
     const { user, setUser } = useContext(UserContext);
+    const navigate = useNavigate();
     const [ loginKey, setLoginKey ] = useState("");
     let globalData;
     console.log(globalData)
@@ -36,7 +37,7 @@ export default function Login() {
                     icon: "success",
                     text: "Welcome!!!"
                 })
-
+                navigate ("/views")
             } else {
                 
                 return false
