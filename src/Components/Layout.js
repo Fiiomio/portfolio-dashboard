@@ -48,7 +48,7 @@ export default function Layout ({data}) {
                             <tbody>
                                 {fetchedData.map((res,index) => (
                                 <tr key={index}>
-                                <td>{convertToPhilippineTime(res[td1])}</td>
+                                    <td>{convertToPhilippineTime(res[td1])}</td>
                                     <td>{td2.map((prop) => res[prop]).join(", ")}</td>
                                     <td>{res[td3]}</td>
                                 </tr>

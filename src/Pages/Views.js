@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import NavBar from '../components/NavBar';
+import { Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 
@@ -40,8 +41,15 @@ export default function Views() {
 
     return (
         <>
-            {/* <NavBar /> */}
-            <Layout data={data} />
+          { token === null ? (<Navigate to="/" />)
+          :
+            (
+              <>
+                {/* <NavBar /> */}
+                <Layout data={data} />
+              </>
+            )
+          }
         </>
     )
 

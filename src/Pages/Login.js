@@ -60,7 +60,7 @@ export default function Login() {
                 <Form.Group controlId="Login Key">
                     <Form.Label></Form.Label>
                     <Form.Control
-                        type="text"
+                        type="password"
                         placeholder=""
                         required
                         value={loginKey}
