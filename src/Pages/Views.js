@@ -77,13 +77,13 @@ export default function Views() {
         (
           <>
             {/* <NavBar /> */}
-            <Layout data={data} />
-            <select value={selectedMonth} onChange={handleMonthChange}>
+            <select value={selectedMonth} onChange={handleMonthChange} style={{ position: "absolute", right: 10, top: 10 }}>
               <option value={currentMonth}>Select a month</option>
               <option value="2023-08">August 2023</option>
               <option value="2023-09">September 2023</option>
               <option value="2023-10">October 2023</option>
             </select>
+            <Layout data={data} />
           </>
         )
       }

@@ -15,11 +15,17 @@ export default function Layout ({data}) {
       
         return new Date(time).toLocaleString("en-US", options);
       }
+    function formatDate(dateString) {
+    const options = { month: 'short', day: 'numeric', year: 'numeric', weekday: 'short' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-PH', options);
+    }
 
     return (
         <Container>
             <Row>
-                <Col className="col-12 col-lg-6 d-flex justify-content-center">
+                <Col className="justify-content-center">
+                <h1 className="text-center my-5">{table1H1}</h1>
                     <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px" }}>
                         <style>
                             {`
@@ -32,13 +38,8 @@ export default function Layout ({data}) {
                             }
                             `}
                         </style>
-                        <Table id="custom-table2" striped bordered responsive className="text-center my-5">
+                        <Table id="custom-table2" striped bordered responsive className="text-center">
                             <thead>
-                                <tr>
-                                    <th colSpan="3">
-                                        <h1 className="text-center">{table1H1}</h1>
-                                    </th>
-                                </tr>
                                 <tr>
                                     <th>Time</th>
                                     <th>{th2}</th>
@@ -57,7 +58,8 @@ export default function Layout ({data}) {
                         </Table>
                     </div>
                 </Col>
-                <Col className="col-12 col-lg-6 d-flex justify-content-center">
+                <Col className="justify-content-center">
+                    <h1 className="text-center my-5">{table2H1}</h1>
                     <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px" }}>
                         <style>
                             {`
@@ -70,13 +72,8 @@ export default function Layout ({data}) {
                             }
                             `}
                         </style>
-                        <Table id="custom-table2" striped bordered responsive className="text-center my-5">
+                        <Table id="custom-table2" striped bordered responsive className="text-center">
                             <thead>
-                                <tr>
-                                    <th colSpan="3">
-                                        <h1 className="text-center">{table2H1}</h1>
-                                    </th>
-                                </tr>
                                 <tr>
                                     <th>Time</th>
                                     <th>{th2}</th>
@@ -86,7 +83,7 @@ export default function Layout ({data}) {
                             <tbody>
                                 {fetchedData2.map((res,index) => (
                                 <tr key={index}>
-                                    <td>{convertToPhilippineTime(res[td1])}</td>
+                                    <td>{formatDate(res[td1])}</td>
                                     <td>{td2.map((prop) => res[prop]).join(", ")}</td>
                                     <td>{res[td3]}</td>
                                 </tr>
