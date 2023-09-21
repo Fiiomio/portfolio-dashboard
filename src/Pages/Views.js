@@ -40,7 +40,6 @@ export default function Views() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setViewsData(data);
       })
       .catch((error) => console.log(error));
@@ -61,12 +60,8 @@ export default function Views() {
     .catch((error) => console.log(error));
   }
 
-
-  console.log(monthlyData)
-
   const handleMonthChange = (event) => {
     const selectedDate = event.target.value;
-    console.log(selectedDate);
     setSelectedMonth(selectedDate);
   };
 
@@ -82,6 +77,20 @@ export default function Views() {
               <option value="2023-08">August 2023</option>
               <option value="2023-09">September 2023</option>
               <option value="2023-10">October 2023</option>
+              <option value="2023-11">November 2023</option>
+              <option value="2023-12">December 2023</option>
+              <option value="2024-01">January 2024</option>
+              <option value="2024-02">February 2024</option>
+              <option value="2024-03">March 2024</option>
+              <option value="2024-04">April 2024</option>
+              <option value="2024-05">May 2024</option>
+              <option value="2024-06">June 2024</option>
+              <option value="2024-07">July 2024</option>
+              <option value="2024-08">August 2024</option>
+              <option value="2024-09">September 2024</option>
+              <option value="2024-10">October 2024</option>
+              <option value="2024-11">November 2024</option>
+              <option value="2024-12">December 2024</option>
             </select>
             <Layout data={data} />
           </>

@@ -10,7 +10,6 @@ export default function Login() {
     const navigate = useNavigate();
     const [ loginKey, setLoginKey ] = useState("");
     let globalData;
-    console.log(globalData)
 
     function authenticateKey(e) {
 
@@ -29,7 +28,6 @@ export default function Login() {
         .then(res => res.json())
         .then(data => {
             globalData = data;
-            console.log(data);
             if (data.access) {
                 localStorage.setItem("token", data.access);
                 Swal.fire ({
@@ -47,12 +45,7 @@ export default function Login() {
         })
     
     }
-
-    console.log(user)
-    console.log(user.access)
-    console.log(localStorage)
-    console.log(localStorage.token)
-
+    
     return (
 
         (localStorage.token === null || localStorage.token === undefined) ? 
