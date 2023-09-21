@@ -60,6 +60,8 @@ export default function Login() {
                         value={loginKey}
                         onChange={(e) => setLoginKey(e.target.value)} />
                 </Form.Group>
+                <Button variant="primary" type="submit" className="mt-5">
+                </Button>
             </Form>
 
             :
