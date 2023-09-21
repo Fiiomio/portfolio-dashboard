@@ -26,7 +26,8 @@ export default function Layout ({data}) {
             <Row>
                 <Col className="justify-content-center">
                 <h1 className="text-center my-5">{table1H1}</h1>
-                    <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px" }}>
+                    <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px",
+                    marginBottom: "-5rem" }}>
                         <style>
                             {`
                             div::-webkit-scrollbar {
@@ -60,7 +61,8 @@ export default function Layout ({data}) {
                 </Col>
                 <Col className="justify-content-center">
                     <h1 className="text-center my-5">{table2H1}</h1>
-                    <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px" }}>
+                    <div style={{ height: "50vh", overflow: "auto", scrollbarWidth: "none", borderRadius: "15px",
+                    marginBottom: "10rem" }}>
                         <style>
                             {`
                             div::-webkit-scrollbar {
