@@ -3,7 +3,7 @@ import { Col, Container, Row, Table } from 'react-bootstrap'
 
 export default function Layout ({data}) {
 
-    const { table1H1, table2H1, th2, th3, fetchedData, td1, td2, td3 } = data;
+    const { table1H1, table2H1, th2, th3, fetchedData, td1, td2, td3, fetchedData2 } = data;
 
     function convertToPhilippineTime(time) {
         const options = {
@@ -84,7 +84,7 @@ export default function Layout ({data}) {
                                 </tr>
                             </thead>
                             <tbody>
-                                {fetchedData.map((res,index) => (
+                                {fetchedData2.map((res,index) => (
                                 <tr key={index}>
                                     <td>{convertToPhilippineTime(res[td1])}</td>
                                     <td>{td2.map((prop) => res[prop]).join(", ")}</td>
