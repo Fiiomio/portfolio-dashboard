@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Contact from './pages/Contact';
+import Contact from './Pages/Contact';
 import { Container } from 'react-bootstrap';
-import Login from './pages/Login';
+import Login from './Pages/Login';
 import { UserProvider } from './UserContext';
 import { useState, useEffect } from 'react';
-import Views from './pages/Views'
+import Views from './Pages/Views'
 import './App.css';
 
 function App() {
