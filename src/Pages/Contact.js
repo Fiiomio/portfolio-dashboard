@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap'
-import Layout from '../components/Layout';
-import NavBar from '../components/NavBar';
+import Layout from '../Components/Layout';
+import NavBar from '../Components/NavBar';
 import { Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
